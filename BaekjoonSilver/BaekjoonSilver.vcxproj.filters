@@ -201,11 +201,7 @@
     <ClCompile Include="N과_M%2812%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-<<<<<<< Updated upstream
     <ClCompile Include="보물.cpp">
-=======
-    <ClCompile Include="소트인사이드.cpp">
->>>>>>> Stashed changes
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
