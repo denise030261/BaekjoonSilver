@@ -1,57 +1,34 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
-
 using namespace std;
 
-int main()
-{
-	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-	vector<int> q;
-	int q_num = 0; int k_num = 0; int u = 0; int a = 0; int c = 0;
-	int compare = 1;
-	int result = -1;
-	vector<int> k;
-	string str;
-	cin >> str;
+int dp[505][505] = { 0, };
 
-	for (int i = 0; i < str.length(); i++)
-	{
-		if (str[i] == 'q' && q_num >= u && q_num >= a && q_num >= c && q_num >= k_num)
-		{
-			q.push_back(i);
-			q_num++;
-		}
-		else if (str[i] == 'u' && u < q_num)
-			u++;
-		else if (str[i] == 'a' && a < u)
-			a++;
-		else if (str[i] == 'c' && c < a)
-			c++;
-		else if (str[i] == 'k' && k_num < c)
-		{
-			k.push_back(i);
-			k_num++;
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
 
-			if (result == -1)
-				result = 1;
-			else
-			{
-				if (k[0] > q[compare])
-				{
-					compare++;
-					result++;
-				}
-				else if (k[0] < q[compare])
-				{
-					k.erase(k.begin());
-					q.erase(q.begin());
-				}
-			}
+	//입력
+	int n; cin >> n;
+	for (int i = 1; i <= n; i++) { //높이
+		for (int j = 1; j <= i; j++) { //가로
+			cin >> dp[i][j];
 		}
 	}
 
-	if (q_num == u && u == a && a == c && c == k_num)
-		cout << result;
-	else
-		cout << -1;
+	//문제 해결
+	int mmax = dp[1][1];
+
+	for (int i = 2; i <= n; i++) {
+		for (int j = 1; j <= i + 1; j++) {
+			if (j == 1) dp[i][j] += dp[i - 1][j];
+			else if (j == i) dp[i][j] += dp[i - 1][j - 1];
+			else dp[i][j] += max(dp[i - 1][j - 1], dp[i - 1][j]);
+			mmax = max(mmax, dp[i][j]);
+		}
+	}
+
+	//결과 출력
+	cout << mmax << '\n';
 }
