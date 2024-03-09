@@ -222,5 +222,8 @@
     <ClCompile Include="스티커.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="구간_합_구하기_5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
