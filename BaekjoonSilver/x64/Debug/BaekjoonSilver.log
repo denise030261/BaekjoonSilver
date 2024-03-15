@@ -1,3 +1,6 @@
-﻿  구간_합_구하기_5.cpp
-C:\Users\admin\Documents\GitHub\BaekjoonSilver\BaekjoonSilver\구간_합_구하기_5.cpp(10,11): warning C4101: 'num' :참조되지 않은 지역 변수입니다.
+﻿  분수_합.cpp
+C:\Users\admin\Documents\GitHub\BaekjoonSilver\BaekjoonSilver\분수_합.cpp(40,39): warning C4244: '인수': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\admin\Documents\GitHub\BaekjoonSilver\BaekjoonSilver\분수_합.cpp(40,27): warning C4244: '인수': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\admin\Documents\GitHub\BaekjoonSilver\BaekjoonSilver\분수_합.cpp(40,90): warning C4244: '인수': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\admin\Documents\GitHub\BaekjoonSilver\BaekjoonSilver\분수_합.cpp(40,78): warning C4244: '인수': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   BaekjoonSilver.vcxproj -> C:\Users\admin\Documents\GitHub\BaekjoonSilver\x64\Debug\BaekjoonSilver.exe
