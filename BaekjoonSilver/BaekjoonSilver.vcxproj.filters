@@ -243,5 +243,8 @@
     <ClCompile Include="시리얼_넘버.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="베르트랑_공준.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
